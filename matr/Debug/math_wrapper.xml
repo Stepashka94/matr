@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        "math_wrapper"
+    </assembly>
+    <members>
+        <member name="M:math_wrapper.MatrFuncs.MatrTranspon_NotParal(System.Double[][],System.Int32)">
+            <summary>
+Транспонирование матрицы.
+</summary>
+            <param name="m">Матрица.</param>
+            <param name="n">Размерность.</param>
+            <returns>Матрица.</returns>
+        </member>
+        <member name="M:math_wrapper.MatrFuncs.MatrXMatr_NotParal(System.Double[][],System.Double[][],System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+Умножение матрицы на матрицу.
+</summary>
+            <param name="m1">Первая матрица.</param>
+            <param name="m2">Вторая матрица.</param>
+            <param name="h1">Высота первой матрицы.</param>
+            <param name="w1">Ширина первой матрицы.</param>
+            <param name="h2">Высота второй матрицы.</param>
+            <param name="w2">Ширина второй матрицы.</param>
+            <returns>Матрица.</returns>
+        </member>
+        <member name="M:math_wrapper.MatrFuncs.MatrXVec_NotParal(System.Double[][],System.Double[],System.Int32,System.Int32)">
+            <summary>
+Умножение матрицы на вектор.
+</summary>
+            <param name="m">Матрица.</param>
+            <param name="v">Вектор.</param>
+            <param name="n">Высота матрицы.</param>
+            <param name="k">Ширина матрицы.</param>
+            <returns>Вектор.</returns>
+        </member>
+        <member name="M:math_wrapper.MatrFuncs.MatrTranspon(System.Double[][],System.Int32)">
+            <summary>
+Транспонирование матрицы.
+</summary>
+            <param name="m">Матрица.</param>
+            <param name="n">Размерность.</param>
+            <returns>Матрица.</returns>
+        </member>
+        <member name="M:math_wrapper.MatrFuncs.MatrXMatr(System.Double[][],System.Double[][],System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+Умножение матрицы на матрицу.
+</summary>
+            <param name="m1">Первая матрица.</param>
+            <param name="m2">Вторая матрица.</param>
+            <param name="h1">Высота первой матрицы.</param>
+            <param name="w1">Ширина первой матрицы.</param>
+            <param name="h2">Высота второй матрицы.</param>
+            <param name="w2">Ширина второй матрицы.</param>
+            <returns>Матрица.</returns>
+        </member>
+        <member name="M:math_wrapper.MatrFuncs.MatrXVec(System.Double[][],System.Double[],System.Int32,System.Int32)">
+            <summary>
+Умножение матрицы на вектор.
+</summary>
+            <param name="m">Матрица.</param>
+            <param name="v">Вектор.</param>
+            <param name="n">Высота матрицы.</param>
+            <param name="k">Ширина матрицы.</param>
+            <returns>Вектор.</returns>
+        </member>
+        <member name="M:math_wrapper.IntegrFuncs.MonteKarlo_NotParal(math_wrapper.IntegrFuncs.FDelegate,System.Double,System.Double,System.Int32)">
+            <summary>
+Решение определенного интеграла методом Монте-Карло.
+</summary>
+            <param name="fdelegate">Функция.</param>
+            <param name="a">Нижняя граница.</param>
+            <param name="b">Верхняя граница.</param>
+            <param name="N">Число испытаний.</param>
+            <returns>Значение интеграла.</returns>
+        </member>
+        <member name="M:math_wrapper.IntegrFuncs.Simpson38_NotParal(math_wrapper.IntegrFuncs.FDelegate,System.Double,System.Double,System.Int32)">
+            <summary>
+Решение определенного интеграла методом Симпсона 3/8.
+</summary>
+            <param name="fdelegate">Функция.</param>
+            <param name="a">Нижняя граница.</param>
+            <param name="b">Верхняя граница.</param>
+            <param name="N">Количество шагов интегрирования.</param>
+            <returns>Значение интеграла.</returns>
+        </member>
+        <member name="M:math_wrapper.IntegrFuncs.Simpson_NotParal(math_wrapper.IntegrFuncs.FDelegate,System.Double,System.Double,System.Int32)">
+            <summary>
+Решение определенного интеграла методом Симпсона.
+</summary>
+            <param name="fdelegate">Функция.</param>
+            <param name="a">Нижняя граница.</param>
+            <param name="b">Верхняя граница.</param>
+            <param name="N">Количество шагов интегрирования.</param>
+            <returns>Значение интеграла.</returns>
+        </member>
+        <member name="M:math_wrapper.IntegrFuncs.MonteKarlo(math_wrapper.IntegrFuncs.FDelegate,System.Double,System.Double,System.Int32)">
+            <summary>
+Решение определенного интеграла методом Монте-Карло. Параллельная реализация.
+</summary>
+            <param name="fdelegate">Функция.</param>
+            <param name="a">Нижняя граница.</param>
+            <param name="b">Верхняя граница.</param>
+            <param name="N">Число испытаний.</param>
+            <returns>Значение интеграла.</returns>
+        </member>
+        <member name="M:math_wrapper.IntegrFuncs.Simpson38(math_wrapper.IntegrFuncs.FDelegate,System.Double,System.Double,System.Int32)">
+            <summary>
+Решение определенного интеграла методом Симпсона 3/8. Параллельная реализация.
+</summary>
+            <param name="fdelegate">Функция.</param>
+            <param name="a">Нижняя граница.</param>
+            <param name="b">Верхняя граница.</param>
+            <param name="N">Количество шагов интегрирования.</param>
+            <returns>Значение интеграла.</returns>
+        </member>
+        <member name="M:math_wrapper.IntegrFuncs.Simpson(math_wrapper.IntegrFuncs.FDelegate,System.Double,System.Double,System.Int32)">
+            <summary>
+Решение определенного интеграла методом Симпсона. Параллельная реализация.
+</summary>
+            <param name="fdelegate">Функция.</param>
+            <param name="a">Нижняя граница.</param>
+            <param name="b">Верхняя граница.</param>
+            <param name="N">Количество шагов интегрирования.</param>
+            <returns>Значение интеграла.</returns>
+        </member>
+    </members>
+</doc>

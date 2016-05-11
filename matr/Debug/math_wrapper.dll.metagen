@@ -1,0 +1,36 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly math_wrapper, Version=1.0.*, Culture=Инвариантный язык (Инвариантная страна): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class math_wrapper.IntegrFuncs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Simpson(FDelegate, Double, Double, Int32): PrivateScope, Public, HideBySig
+    Simpson38(FDelegate, Double, Double, Int32): PrivateScope, Public, HideBySig
+    MonteKarlo(FDelegate, Double, Double, Int32): PrivateScope, Public, HideBySig
+    Simpson_NotParal(FDelegate, Double, Double, Int32): PrivateScope, Public, HideBySig
+    Simpson38_NotParal(FDelegate, Double, Double, Int32): PrivateScope, Public, HideBySig
+    MonteKarlo_NotParal(FDelegate, Double, Double, Int32): PrivateScope, Public, HideBySig
+Class math_wrapper.IntegrFuncs+FDelegate: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Double): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Double, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class math_wrapper.MatrFuncs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    MatrXVec(Double[][], Double[], Int32, Int32): PrivateScope, Public, HideBySig
+    MatrTranspon(Double[][], Int32): PrivateScope, Public, HideBySig
+    MatrXMatr(Double[][], Double[][], Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    MatrXVec_NotParal(Double[][], Double[], Int32, Int32): PrivateScope, Public, HideBySig
+    MatrTranspon_NotParal(Double[][], Int32): PrivateScope, Public, HideBySig
+    MatrXMatr_NotParal(Double[][], Double[][], Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig

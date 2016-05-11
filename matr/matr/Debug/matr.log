@@ -1,0 +1,30 @@
+﻿Построение начато 28.04.2016 12:22:30.
+     1>Проект "C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\matr\matr.vcxproj" в узле 2 (целевые объекты Rebuild).
+     1>ClCompile:
+         D:\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files\Windows Kits\8.0\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /openmp /Yc"stdafx.h" /Fp"Debug\matr.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /analyze- /errorReport:prompt /clr:nostdlib stdafx.cpp
+         stdafx.cpp
+         D:\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files\Windows Kits\8.0\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /openmp /Yu"stdafx.h" /Fp"Debug\matr.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /analyze- /errorReport:prompt /clr:nostdlib MyIntegrFuncs.cpp MyMatrFuncs.cpp matr.cpp
+         MyIntegrFuncs.cpp
+     1>MyIntegrFuncs.cpp(16): warning C4101: x1: неиспользованная локальная переменная
+     1>MyIntegrFuncs.cpp(55): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+     1>MyIntegrFuncs.cpp(144): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+     1>MyIntegrFuncs.cpp(174): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+         MyMatrFuncs.cpp
+         matr.cpp
+     1>matr.cpp(3): warning C4627: #include <omp.h>: пропущен при поиске использования предкомпилированного заголовка
+                 Добавление директивы в "stdafx.h" или перестройка предкомпилированного заголовка
+         Создание кода...
+         D:\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /clr /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /openmp /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /analyze- /errorReport:prompt "C:\Users\12345\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+       Link:
+         D:\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\Debug\matr.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\Debug\matr.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\MyIntegrFuncs.obj
+         Debug\MyMatrFuncs.obj
+         Debug\matr.obj
+         Debug\stdafx.obj
+         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+         matr.vcxproj -> C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\Debug\matr.exe
+     1>Построение проекта "C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\matr\matr.vcxproj" завершено (целевые объекты Rebuild).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:01.46

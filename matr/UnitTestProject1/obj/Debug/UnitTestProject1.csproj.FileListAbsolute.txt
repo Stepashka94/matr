@@ -1,0 +1,11 @@
+C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\UnitTestProject1\bin\Debug\ClassLibrary2.dll
+C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\UnitTestProject1\bin\Debug\ClassLibrary2.pdb
+C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\UnitTestProject1\bin\Debug\math_wrapper.dll
+C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\UnitTestProject1\bin\Debug\math_wrapper.pdb
+C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\UnitTestProject1\bin\Debug\math_wrapper.xml
+C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\UnitTestProject1\bin\Debug\UnitTestProject1.XML
