@@ -151,33 +151,48 @@ double MyIntegrFuncs::MonteKarlo_NotParal(void* Function, double a, double b, in
 	int col = 0;
 	h = (b - a) / n; // Шаг интегрирования
 	double S;
-	c = F(a);
-	// Поиск максимума
+	double a1 = a, b1 = b;
+	double x1 = 0, x2 = 0;
+	double x = 0;
+	double e = 0.0001;
+	double q = (1 + sqrt(5.0)) / 2;
+	x1 = b1 - (b1 - a1) / q;
+	x2 = a1 + (b1 - a1) / q;
+	while(abs(b1 - a1) > e)
+	{
+		if (F(x1) <= F(x2))
+		{
+			a1 = x1;
+			x1 = x2;
+			x2 = a1 + (b1 - a1) / q;
+		}
+		else
+		{
+			b1 = x2;
+			x2 = x1;
+			x1 = b1 - (b1 - a1) / q;
+		}
+	}
+	c = F((a1 + b1) / 2);
+	S = c * (b - a);
+
+	double m;
+	double r3, r4, r5, r6;
+	int r1, r2;
+
 	for (int i = 0; i < n; i++)
 	{
-		if (F(a + (i + 1) * h) > c)
+		r1 = rand()%100;
+		r2 = rand()%100;
+		r3 = r1 * 0.01; // генерируем число от 0 до 1
+		r4 = r2 * 0.01;
+		r5 = r3 * (b - a) + a;
+		r6 = r4 * c;
+		m = F(r5);
+		if  (r6 < m)
 		{
-			c = F(a + (i + 1) * h); 
-		} 
+			col = col + 1;
+		}
 	}
-	d = F(a);
-	// Поиск минимума
-	for (int i=0; i<n; i++)
-	{
-		if (F(a + (i + 1) * h) < d)
-		{
-			d = F(a + (i + 1) * h);
-		} 
-	}
-	S = (c - d) * (b - a);
-	double r;
-	for (int i = 0; i < n; i++)
-	{
-		int r1 = rand()%100;
-		double r2 = r1 * 0.01; // генерируем число от 0 до 1
-		r = (b - a) * r2;
-		col = col + F(r);
-	}
-	double I = (b - a) * col / n;
-	return I;
+	return S * ((double)col / n);
 }
