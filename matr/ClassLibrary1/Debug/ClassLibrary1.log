@@ -1,27 +1,36 @@
-﻿Построение начато 11.05.2016 15:07:59.
-     1>Проект "C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\ClassLibrary1\ClassLibrary1.vcxproj" в узле 2 (целевые объекты Build).
+﻿Построение начато 14.05.2016 1:45:02.
+     1>Проект "C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\ClassLibrary1\ClassLibrary1.vcxproj" в узле 2 (целевые объекты Rebuild).
      1>ClCompile:
-         D:\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.0\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /openmp /Yu"stdafx.h" /Fp"Debug\math_wrapper.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /doc"Debug\\" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib integr_wrapper.cpp
+         D:\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.0\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /openmp /Yc"stdafx.h" /Fp"Debug\math_wrapper.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /doc"Debug\\" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Stdafx.cpp
+         Stdafx.cpp
+         D:\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.0\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /openmp /Yu"stdafx.h" /Fp"Debug\math_wrapper.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /doc"Debug\\" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib AssemblyInfo.cpp diff_wrapper.cpp integr_wrapper.cpp matr_wrapper.cpp
+         AssemblyInfo.cpp
+         diff_wrapper.cpp
          integr_wrapper.cpp
      1>c:\users\12345\documents\visual studio 2012\projects\matr\classlibrary1\..\matr\MyIntegrFuncs.cpp(16): warning C4101: x1: неиспользованная локальная переменная
      1>c:\users\12345\documents\visual studio 2012\projects\matr\classlibrary1\..\matr\MyIntegrFuncs.cpp(55): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
      1>c:\users\12345\documents\visual studio 2012\projects\matr\classlibrary1\..\matr\MyIntegrFuncs.cpp(52): warning C4101: d: неиспользованная локальная переменная
-     1>c:\users\12345\documents\visual studio 2012\projects\matr\classlibrary1\..\matr\MyIntegrFuncs.cpp(158): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-     1>c:\users\12345\documents\visual studio 2012\projects\matr\classlibrary1\..\matr\MyIntegrFuncs.cpp(188): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+     1>c:\users\12345\documents\visual studio 2012\projects\matr\classlibrary1\..\matr\MyIntegrFuncs.cpp(149): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+     1>c:\users\12345\documents\visual studio 2012\projects\matr\classlibrary1\..\matr\MyIntegrFuncs.cpp(146): warning C4101: d: неиспользованная локальная переменная
+         matr_wrapper.cpp
+         Создание кода...
          D:\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /openmp /Fo"Debug\\" /Fd"Debug\vc110.pdb" /doc"Debug\\" /TP /analyze- /errorReport:prompt "C:\Users\12345\AppData\Local\Temp\.NETFramework,Version=v4.5.AssemblyAttributes.cpp"
          .NETFramework,Version=v4.5.AssemblyAttributes.cpp
+       ResourceCompile:
+         C:\Program Files\Windows Kits\8.0\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\app.res" app.rc 
        Link:
          D:\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\Debug\math_wrapper.dll" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\Debug\math_wrapper.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\app.res
          Debug\AssemblyInfo.obj
+         Debug\diff_wrapper.obj
          Debug\integr_wrapper.obj
          Debug\matr_wrapper.obj
          Debug\Stdafx.obj
          "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
          ClassLibrary1.vcxproj -> C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\Debug\math_wrapper.dll
        XdcMake:
-         D:\Microsoft Visual Studio 11.0\VC\bin\xdcmake.exe /old "math_wrapper" /nologo /Fo"C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\Debug\math_wrapper.xml" /FsDebug\AssemblyInfo.xdc /FsDebug\integr_wrapper.xdc /FsDebug\matr_wrapper.xdc /FsDebug\Stdafx.xdc /Fs"Debug\.NETFramework,Version=v4.5.AssemblyAttributes.xdc"
-     1>Построение проекта "C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\ClassLibrary1\ClassLibrary1.vcxproj" завершено (целевые объекты Build).
+         D:\Microsoft Visual Studio 11.0\VC\bin\xdcmake.exe /old "math_wrapper" /nologo /Fo"C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\Debug\math_wrapper.xml" /FsDebug\AssemblyInfo.xdc /FsDebug\diff_wrapper.xdc /FsDebug\integr_wrapper.xdc /FsDebug\matr_wrapper.xdc /FsDebug\Stdafx.xdc /Fs"Debug\.NETFramework,Version=v4.5.AssemblyAttributes.xdc"
+     1>Построение проекта "C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\ClassLibrary1\ClassLibrary1.vcxproj" завершено (целевые объекты Rebuild).
 
 Построение успешно завершено.
 
-Затраченное время: 00:00:02.33
+Затраченное время: 00:00:02.12

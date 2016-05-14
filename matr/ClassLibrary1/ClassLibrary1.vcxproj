@@ -82,6 +82,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="diff_wrapper.h" />
     <ClInclude Include="integr_wrapper.h" />
     <ClInclude Include="matr_wrapper.h" />
     <ClInclude Include="resource.h" />
@@ -89,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="diff_wrapper.cpp" />
     <ClCompile Include="integr_wrapper.cpp" />
     <ClCompile Include="matr_wrapper.cpp" />
     <ClCompile Include="Stdafx.cpp">
