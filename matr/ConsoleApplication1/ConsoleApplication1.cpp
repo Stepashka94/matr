@@ -25,7 +25,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		printf("Simpson - %f\n", res);		
 		res = myCppClass->Simpson38_NotParal(F,0,10,100000);
 		printf("Simpson38 - %f\n", res);
-		res = myCppClass->MonteKarlo_NotParal(F,0,10,100000);
+		res = myCppClass->MonteKarlo_NotParal(F,0,10,1000000);
 		printf("MonteKarlo - %f\n", res);
 		getchar();
 	return 0;

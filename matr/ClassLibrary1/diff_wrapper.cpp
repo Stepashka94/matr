@@ -24,16 +24,16 @@ math_wrapper::DiffFuncs::DiffFuncs()
 /// <returns>Массив с найденными значениями.</returns>
 array<double>^ math_wrapper::DiffFuncs::Eiler(array<FDelegate ^>^ fdelegate, double a, double b, int N, array<double>^ arr_y, int count)
 {
-	double* y = new double[count];
-	System::Runtime::InteropServices::Marshal::Copy(arr_y, 0, System::IntPtr(y), count);
-	delegatePointer = new void*[count];
+	double* y = new double[count];//создание неуправляемого массива
+	System::Runtime::InteropServices::Marshal::Copy(arr_y, 0, System::IntPtr(y), count);//маршалинг. копирование данных из управляемого массива в неуправляемый
+	delegatePointer = new void*[count];//создание массива указателей на функции
 	for (int i = 0; i < count; i++)
 	{
-		delegatePointer[i] = (void*)Marshal::GetFunctionPointerForDelegate(fdelegate[i]).ToPointer();
+		delegatePointer[i] = (void*)Marshal::GetFunctionPointerForDelegate(fdelegate[i]).ToPointer();//преобразование массива делегатов в массив указателей
 	}
-	double* res = myCppClass->Eiler(delegatePointer, a, b, N, y, count);
-	array<double>^ new_res = gcnew array<double>(count);
-	System::Runtime::InteropServices::Marshal::Copy(System::IntPtr(res), new_res, 0, count);
+	double* res = myCppClass->Eiler(delegatePointer, a, b, N, y, count);//вызов функции. получение результата
+	array<double>^ new_res = gcnew array<double>(count);//создание управляемого массива
+	System::Runtime::InteropServices::Marshal::Copy(System::IntPtr(res), new_res, 0, count);//копирование данных из неуправляемого массива в управляемый
 	return new_res;
 };
 
@@ -174,7 +174,7 @@ array<double>^ math_wrapper::DiffFuncs::RungeKutta4_Paral(array<FDelegate ^>^ fd
 
 
 //================================================================================================
-//Перерузки с использованием tau
+//Перерузки с использованием tau вместо a и b
 //================================================================================================
 
 /// <summary>

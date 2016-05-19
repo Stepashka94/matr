@@ -107,8 +107,16 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lbl_res = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbl_time_paral = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_res_paral = new System.Windows.Forms.Label();
+            this.lbl_r = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbl_time = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.lbl_res = new System.Windows.Forms.Label();
             this.btn_MK = new System.Windows.Forms.Button();
             this.btn_Simp38 = new System.Windows.Forms.Button();
             this.btn_Simp = new System.Windows.Forms.Button();
@@ -118,14 +126,22 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lbl_r = new System.Windows.Forms.Label();
-            this.lbl_res_paral = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbl_time = new System.Windows.Forms.Label();
-            this.lbl_time_paral = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lbl_diff_time_paral = new System.Windows.Forms.Label();
+            this.lbl_diff_time = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dgv_diff_paral = new System.Windows.Forms.DataGridView();
+            this.dgv_diff = new System.Windows.Forms.DataGridView();
+            this.btn_rk4 = new System.Windows.Forms.Button();
+            this.btn_rk2 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbx_N_diff = new System.Windows.Forms.TextBox();
+            this.tbx_b_diff = new System.Windows.Forms.TextBox();
+            this.tbx_a_diff = new System.Windows.Forms.TextBox();
+            this.btn_eiler = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -133,8 +149,11 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_diff_paral)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_diff)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -826,12 +845,14 @@
             this.button2.TabIndex = 19;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(12, 10);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -875,13 +896,82 @@
             this.tabPage2.Text = "Интегрирование";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // lbl_res
+            // groupBox3
             // 
-            this.lbl_res.AutoSize = true;
-            this.lbl_res.Location = new System.Drawing.Point(6, 49);
-            this.lbl_res.Name = "lbl_res";
-            this.lbl_res.Size = new System.Drawing.Size(0, 13);
-            this.lbl_res.TabIndex = 10;
+            this.groupBox3.Controls.Add(this.lbl_time_paral);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.lbl_res_paral);
+            this.groupBox3.Controls.Add(this.lbl_r);
+            this.groupBox3.Location = new System.Drawing.Point(427, 10);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 135);
+            this.groupBox3.TabIndex = 12;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Параллельное";
+            // 
+            // lbl_time_paral
+            // 
+            this.lbl_time_paral.AutoSize = true;
+            this.lbl_time_paral.Location = new System.Drawing.Point(6, 101);
+            this.lbl_time_paral.Name = "lbl_time_paral";
+            this.lbl_time_paral.Size = new System.Drawing.Size(0, 13);
+            this.lbl_time_paral.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 78);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Время";
+            // 
+            // lbl_res_paral
+            // 
+            this.lbl_res_paral.AutoSize = true;
+            this.lbl_res_paral.Location = new System.Drawing.Point(6, 52);
+            this.lbl_res_paral.Name = "lbl_res_paral";
+            this.lbl_res_paral.Size = new System.Drawing.Size(0, 13);
+            this.lbl_res_paral.TabIndex = 13;
+            // 
+            // lbl_r
+            // 
+            this.lbl_r.AutoSize = true;
+            this.lbl_r.Location = new System.Drawing.Point(6, 26);
+            this.lbl_r.Name = "lbl_r";
+            this.lbl_r.Size = new System.Drawing.Size(67, 13);
+            this.lbl_r.TabIndex = 13;
+            this.lbl_r.Text = "Результаты";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lbl_time);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.lbl_res);
+            this.groupBox2.Location = new System.Drawing.Point(178, 13);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 132);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Последовательное";
+            // 
+            // lbl_time
+            // 
+            this.lbl_time.AutoSize = true;
+            this.lbl_time.Location = new System.Drawing.Point(6, 98);
+            this.lbl_time.Name = "lbl_time";
+            this.lbl_time.Size = new System.Drawing.Size(0, 13);
+            this.lbl_time.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 75);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Время";
             // 
             // label4
             // 
@@ -891,6 +981,14 @@
             this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Результаты";
+            // 
+            // lbl_res
+            // 
+            this.lbl_res.AutoSize = true;
+            this.lbl_res.Location = new System.Drawing.Point(6, 49);
+            this.lbl_res.Name = "lbl_res";
+            this.lbl_res.Size = new System.Drawing.Size(0, 13);
+            this.lbl_res.TabIndex = 10;
             // 
             // btn_MK
             // 
@@ -973,82 +1071,161 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "a";
             // 
-            // groupBox2
+            // tabPage3
             // 
-            this.groupBox2.Controls.Add(this.lbl_time);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.lbl_res);
-            this.groupBox2.Location = new System.Drawing.Point(178, 13);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 132);
-            this.groupBox2.TabIndex = 11;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Последовательное";
+            this.tabPage3.Controls.Add(this.lbl_diff_time_paral);
+            this.tabPage3.Controls.Add(this.lbl_diff_time);
+            this.tabPage3.Controls.Add(this.label11);
+            this.tabPage3.Controls.Add(this.label10);
+            this.tabPage3.Controls.Add(this.dgv_diff_paral);
+            this.tabPage3.Controls.Add(this.dgv_diff);
+            this.tabPage3.Controls.Add(this.btn_rk4);
+            this.tabPage3.Controls.Add(this.btn_rk2);
+            this.tabPage3.Controls.Add(this.label9);
+            this.tabPage3.Controls.Add(this.label8);
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.tbx_N_diff);
+            this.tabPage3.Controls.Add(this.tbx_b_diff);
+            this.tabPage3.Controls.Add(this.tbx_a_diff);
+            this.tabPage3.Controls.Add(this.btn_eiler);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(743, 280);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Дифф";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // groupBox3
+            // lbl_diff_time_paral
             // 
-            this.groupBox3.Controls.Add(this.lbl_time_paral);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.lbl_res_paral);
-            this.groupBox3.Controls.Add(this.lbl_r);
-            this.groupBox3.Location = new System.Drawing.Point(427, 10);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 135);
-            this.groupBox3.TabIndex = 12;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Параллельное";
+            this.lbl_diff_time_paral.AutoSize = true;
+            this.lbl_diff_time_paral.Location = new System.Drawing.Point(314, 163);
+            this.lbl_diff_time_paral.Name = "lbl_diff_time_paral";
+            this.lbl_diff_time_paral.Size = new System.Drawing.Size(0, 13);
+            this.lbl_diff_time_paral.TabIndex = 14;
             // 
-            // lbl_r
+            // lbl_diff_time
             // 
-            this.lbl_r.AutoSize = true;
-            this.lbl_r.Location = new System.Drawing.Point(6, 26);
-            this.lbl_r.Name = "lbl_r";
-            this.lbl_r.Size = new System.Drawing.Size(67, 13);
-            this.lbl_r.TabIndex = 13;
-            this.lbl_r.Text = "Результаты";
+            this.lbl_diff_time.AutoSize = true;
+            this.lbl_diff_time.Location = new System.Drawing.Point(314, 16);
+            this.lbl_diff_time.Name = "lbl_diff_time";
+            this.lbl_diff_time.Size = new System.Drawing.Size(0, 13);
+            this.lbl_diff_time.TabIndex = 13;
             // 
-            // lbl_res_paral
+            // label11
             // 
-            this.lbl_res_paral.AutoSize = true;
-            this.lbl_res_paral.Location = new System.Drawing.Point(6, 52);
-            this.lbl_res_paral.Name = "lbl_res_paral";
-            this.lbl_res_paral.Size = new System.Drawing.Size(0, 13);
-            this.lbl_res_paral.TabIndex = 13;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(192, 163);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 13);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Параллельно";
             // 
-            // label5
+            // label10
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 75);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Время";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(192, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(98, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Последовательно";
             // 
-            // label6
+            // dgv_diff_paral
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 78);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Время";
+            this.dgv_diff_paral.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_diff_paral.Location = new System.Drawing.Point(180, 179);
+            this.dgv_diff_paral.Name = "dgv_diff_paral";
+            this.dgv_diff_paral.Size = new System.Drawing.Size(557, 95);
+            this.dgv_diff_paral.TabIndex = 10;
             // 
-            // lbl_time
+            // dgv_diff
             // 
-            this.lbl_time.AutoSize = true;
-            this.lbl_time.Location = new System.Drawing.Point(6, 98);
-            this.lbl_time.Name = "lbl_time";
-            this.lbl_time.Size = new System.Drawing.Size(0, 13);
-            this.lbl_time.TabIndex = 12;
+            this.dgv_diff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_diff.Location = new System.Drawing.Point(180, 32);
+            this.dgv_diff.Name = "dgv_diff";
+            this.dgv_diff.Size = new System.Drawing.Size(557, 88);
+            this.dgv_diff.TabIndex = 9;
             // 
-            // lbl_time_paral
+            // btn_rk4
             // 
-            this.lbl_time_paral.AutoSize = true;
-            this.lbl_time_paral.Location = new System.Drawing.Point(6, 101);
-            this.lbl_time_paral.Name = "lbl_time_paral";
-            this.lbl_time_paral.Size = new System.Drawing.Size(0, 13);
-            this.lbl_time_paral.TabIndex = 15;
+            this.btn_rk4.Location = new System.Drawing.Point(6, 172);
+            this.btn_rk4.Name = "btn_rk4";
+            this.btn_rk4.Size = new System.Drawing.Size(89, 23);
+            this.btn_rk4.TabIndex = 8;
+            this.btn_rk4.Text = "Рунге-Кутта 4";
+            this.btn_rk4.UseVisualStyleBackColor = true;
+            this.btn_rk4.Click += new System.EventHandler(this.btn_rk4_Click);
+            // 
+            // btn_rk2
+            // 
+            this.btn_rk2.Location = new System.Drawing.Point(6, 143);
+            this.btn_rk2.Name = "btn_rk2";
+            this.btn_rk2.Size = new System.Drawing.Size(89, 23);
+            this.btn_rk2.TabIndex = 7;
+            this.btn_rk2.Text = "Рунге-Кутта 2";
+            this.btn_rk2.UseVisualStyleBackColor = true;
+            this.btn_rk2.Click += new System.EventHandler(this.btn_rk2_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 61);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(15, 13);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "N";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 35);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(13, 13);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "b";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(13, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "a";
+            // 
+            // tbx_N_diff
+            // 
+            this.tbx_N_diff.Location = new System.Drawing.Point(44, 58);
+            this.tbx_N_diff.Name = "tbx_N_diff";
+            this.tbx_N_diff.Size = new System.Drawing.Size(100, 20);
+            this.tbx_N_diff.TabIndex = 3;
+            this.tbx_N_diff.Text = "100";
+            // 
+            // tbx_b_diff
+            // 
+            this.tbx_b_diff.Location = new System.Drawing.Point(44, 32);
+            this.tbx_b_diff.Name = "tbx_b_diff";
+            this.tbx_b_diff.Size = new System.Drawing.Size(100, 20);
+            this.tbx_b_diff.TabIndex = 2;
+            this.tbx_b_diff.Text = "0,1";
+            // 
+            // tbx_a_diff
+            // 
+            this.tbx_a_diff.Location = new System.Drawing.Point(44, 6);
+            this.tbx_a_diff.Name = "tbx_a_diff";
+            this.tbx_a_diff.Size = new System.Drawing.Size(100, 20);
+            this.tbx_a_diff.TabIndex = 1;
+            this.tbx_a_diff.Text = "0";
+            // 
+            // btn_eiler
+            // 
+            this.btn_eiler.Location = new System.Drawing.Point(6, 114);
+            this.btn_eiler.Name = "btn_eiler";
+            this.btn_eiler.Size = new System.Drawing.Size(89, 23);
+            this.btn_eiler.TabIndex = 0;
+            this.btn_eiler.Text = "Эйлер";
+            this.btn_eiler.UseVisualStyleBackColor = true;
+            this.btn_eiler.Click += new System.EventHandler(this.btn_eiler_Click);
             // 
             // Form1
             // 
@@ -1070,10 +1247,14 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_diff_paral)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_diff)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1178,6 +1359,22 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lbl_time;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tbx_N_diff;
+        private System.Windows.Forms.TextBox tbx_b_diff;
+        private System.Windows.Forms.TextBox tbx_a_diff;
+        private System.Windows.Forms.Button btn_eiler;
+        private System.Windows.Forms.Button btn_rk4;
+        private System.Windows.Forms.Button btn_rk2;
+        private System.Windows.Forms.DataGridView dgv_diff;
+        private System.Windows.Forms.Label lbl_diff_time_paral;
+        private System.Windows.Forms.Label lbl_diff_time;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridView dgv_diff_paral;
     }
 }
 

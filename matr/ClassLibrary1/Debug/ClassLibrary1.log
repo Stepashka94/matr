@@ -1,4 +1,4 @@
-﻿Построение начато 14.05.2016 1:45:02.
+﻿Построение начато 19.05.2016 12:32:39.
      1>Проект "C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\ClassLibrary1\ClassLibrary1.vcxproj" в узле 2 (целевые объекты Rebuild).
      1>ClCompile:
          D:\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.0\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /openmp /Yc"stdafx.h" /Fp"Debug\math_wrapper.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /doc"Debug\\" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Stdafx.cpp
@@ -33,4 +33,4 @@
 
 Построение успешно завершено.
 
-Затраченное время: 00:00:02.12
+Затраченное время: 00:00:02.63

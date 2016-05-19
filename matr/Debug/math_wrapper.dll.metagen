@@ -9,6 +9,28 @@ Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e0
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
+Class math_wrapper.DiffFuncs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Eiler(FDelegate[], Double, Int32, Double[], Int32): PrivateScope, Public, HideBySig
+    Eiler(FDelegate[], Double, Double, Int32, Double[], Int32): PrivateScope, Public, HideBySig
+    RungeKutta2(FDelegate[], Double, Int32, Double[], Int32): PrivateScope, Public, HideBySig
+    RungeKutta2(FDelegate[], Double, Double, Int32, Double[], Int32): PrivateScope, Public, HideBySig
+    RungeKutta4(FDelegate[], Double, Int32, Double[], Int32): PrivateScope, Public, HideBySig
+    RungeKutta4(FDelegate[], Double, Double, Int32, Double[], Int32): PrivateScope, Public, HideBySig
+    Eiler_Paral(FDelegate[], Double, Int32, Double[], Int32): PrivateScope, Public, HideBySig
+    Eiler_Paral(FDelegate[], Double, Double, Int32, Double[], Int32): PrivateScope, Public, HideBySig
+    RungeKutta2_Paral(FDelegate[], Double, Int32, Double[], Int32): PrivateScope, Public, HideBySig
+    RungeKutta2_Paral(FDelegate[], Double, Double, Int32, Double[], Int32): PrivateScope, Public, HideBySig
+    RungeKutta4_Paral(FDelegate[], Double, Int32, Double[], Int32): PrivateScope, Public, HideBySig
+    RungeKutta4_Paral(FDelegate[], Double, Double, Int32, Double[], Int32): PrivateScope, Public, HideBySig
+Class math_wrapper.DiffFuncs+FDelegate: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Double, Double*): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Double, Double*, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
 Class math_wrapper.IntegrFuncs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
@@ -28,9 +50,15 @@ Class math_wrapper.IntegrFuncs+FDelegate: AutoLayout, AnsiClass, Class, NestedPu
 Class math_wrapper.MatrFuncs: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
+    MatrXVec(Double[], Double[], Int32, Int32): PrivateScope, Public, HideBySig
     MatrXVec(Double[][], Double[], Int32, Int32): PrivateScope, Public, HideBySig
+    MatrTranspon(Double[], Int32): PrivateScope, Public, HideBySig
     MatrTranspon(Double[][], Int32): PrivateScope, Public, HideBySig
+    MatrXMatr(Double[], Double[], Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
     MatrXMatr(Double[][], Double[][], Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    MatrXVec_NotParal(Double[], Double[], Int32, Int32): PrivateScope, Public, HideBySig
     MatrXVec_NotParal(Double[][], Double[], Int32, Int32): PrivateScope, Public, HideBySig
+    MatrTranspon_NotParal(Double[], Int32): PrivateScope, Public, HideBySig
     MatrTranspon_NotParal(Double[][], Int32): PrivateScope, Public, HideBySig
+    MatrXMatr_NotParal(Double[], Double[], Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
     MatrXMatr_NotParal(Double[][], Double[][], Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig

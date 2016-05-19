@@ -118,7 +118,7 @@ namespace UnitTestProject2
 
             math_wrapper.IntegrFuncs mf1 = new math_wrapper.IntegrFuncs();
 
-            
+
             Stopwatch s1 = new Stopwatch();
             Stopwatch s2 = new Stopwatch();
             s1.Start();
@@ -190,7 +190,7 @@ namespace UnitTestProject2
             math_wrapper.IntegrFuncs mf1 = new math_wrapper.IntegrFuncs();
 
             double res = mf1.Simpson38(F, 0, 10, 1000000);
-            Assert.AreEqual(Math.Round(res,4), 333.3333);
+            Assert.AreEqual(Math.Round(res, 4), 333.3333);
         }
 
         [TestMethod]
@@ -213,5 +213,206 @@ namespace UnitTestProject2
             return x * x;
         }
 
+
+        [TestMethod]
+        public void Eiler()
+        {
+            int count = 3;
+            double[] y = new double[count];
+            y[0] = 1;
+            y[1] = 1;
+            y[2] = 0;
+            DiffFuncs.FDelegate[] masF = new DiffFuncs.FDelegate[count];
+            unsafe { masF[0] = F_diff1; }
+            unsafe { masF[1] = F_diff2; }
+            unsafe { masF[2] = F_diff3; }
+            DiffFuncs df = new DiffFuncs();
+
+            double[] res = df.Eiler(masF, 0, 1, 100, y, count);
+
+            double[] rres = { 1.19, 1.01, 0.11 };
+
+            string str_res = "", str_rres = "";
+
+            for (int i = 0; i < count; i++)
+            {
+                str_res += String.Format("{0:0.00}", res[i]) + " ";
+                str_rres += String.Format("{0:0.00}", rres[i]) + " ";
+            }
+        }
+
+        [TestMethod]
+        public void RungeKutta2()
+        {
+            int count = 3;
+            double[] y = new double[count];
+            y[0] = 1;
+            y[1] = 1;
+            y[2] = 0;
+            DiffFuncs.FDelegate[] masF = new DiffFuncs.FDelegate[count];
+            unsafe { masF[0] = F_diff1; }
+            unsafe { masF[1] = F_diff2; }
+            unsafe { masF[2] = F_diff3; }
+            DiffFuncs df = new DiffFuncs();
+
+            double[] res = df.RungeKutta2(masF, 0, 1, 100, y, count);
+
+            double[] rres = { 1.19, 1.01, 0.11 };
+
+            string str_res = "", str_rres = "";
+
+            for (int i = 0; i < count; i++)
+            {
+                str_res += String.Format("{0:0.00}", res[i]) + " ";
+                str_rres += String.Format("{0:0.00}", rres[i]) + " ";
+            }
+        }
+
+        [TestMethod]
+        public void RungeKutta4()
+        {
+            int count = 3;
+            double[] y = new double[count];
+            y[0] = 1;
+            y[1] = 1;
+            y[2] = 0;
+            DiffFuncs.FDelegate[] masF = new DiffFuncs.FDelegate[count];
+            unsafe { masF[0] = F_diff1; }
+            unsafe { masF[1] = F_diff2; }
+            unsafe { masF[2] = F_diff3; }
+            DiffFuncs df = new DiffFuncs();
+
+            double[] res = df.RungeKutta4(masF, 0, 1, 100, y, count);
+
+            double[] rres = { 1.19, 1.01, 0.11 };
+
+            string str_res = "", str_rres = "";
+
+            for (int i = 0; i < count; i++)
+            {
+                str_res += String.Format("{0:0.00}", res[i]) + " ";
+                str_rres += String.Format("{0:0.00}", rres[i]) + " ";
+            }
+        }
+
+
+        [TestMethod]
+        public void EilerTime()
+        {
+            int count = 300000;
+            double[] y = new double[count];
+            y[0] = 1;
+            y[1] = 1;
+            y[2] = 0;
+            DiffFuncs.FDelegate[] masF = new DiffFuncs.FDelegate[count];
+            for (int i = 0; i < count; i++)
+            {
+                if (i % 3 == 0)
+                    unsafe { masF[i] = F_diff1; }
+                if (i % 3 == 1)
+                    unsafe { masF[i] = F_diff1; }
+                if (i % 3 == 2)
+                    unsafe { masF[i] = F_diff1; }
+            }
+            Stopwatch s1 = new Stopwatch();
+            Stopwatch s2 = new Stopwatch();
+            DiffFuncs df = new DiffFuncs();
+            s1.Start();
+            double[] res = df.Eiler(masF, 0, 1, 100, y, count);
+            s1.Stop();
+
+            s2.Start();
+            double[] res_paral = df.Eiler_Paral(masF, 0, 1, 100, y, count);
+            s2.Stop();
+
+            long n1 = s1.ElapsedMilliseconds;
+            long n2 = s2.ElapsedMilliseconds;
+
+            Assert.AreEqual(n1 < n2, true);
+        }
+
+        [TestMethod]
+        public void RungeKutta2Time()
+        {
+            int count = 300000;
+            double[] y = new double[count];
+            y[0] = 1;
+            y[1] = 1;
+            y[2] = 0;
+            DiffFuncs.FDelegate[] masF = new DiffFuncs.FDelegate[count];
+            for (int i = 0; i < count; i++)
+            {
+                if (i % 3 == 0)
+                    unsafe { masF[i] = F_diff1; }
+                if (i % 3 == 1)
+                    unsafe { masF[i] = F_diff1; }
+                if (i % 3 == 2)
+                    unsafe { masF[i] = F_diff1; }
+            }
+            Stopwatch s1 = new Stopwatch();
+            Stopwatch s2 = new Stopwatch();
+            DiffFuncs df = new DiffFuncs();
+            s1.Start();
+            double[] res = df.RungeKutta2(masF, 0, 1, 100, y, count);
+            s1.Stop();
+
+            s2.Start();
+            double[] res_paral = df.RungeKutta2_Paral(masF, 0, 1, 100, y, count);
+            s2.Stop();
+
+            long n1 = s1.ElapsedMilliseconds;
+            long n2 = s2.ElapsedMilliseconds;
+
+            Assert.AreEqual(n1 < n2, true);
+        }
+
+        [TestMethod]
+        public void RungeKutta4Time()
+        {
+            int count = 300000;
+            double[] y = new double[count];
+            y[0] = 1;
+            y[1] = 1;
+            y[2] = 0;
+            DiffFuncs.FDelegate[] masF = new DiffFuncs.FDelegate[count];
+            for (int i = 0; i < count; i++)
+            {
+                if (i % 3 == 0)
+                    unsafe { masF[i] = F_diff1; }
+                if (i % 3 == 1)
+                    unsafe { masF[i] = F_diff1; }
+                if (i % 3 == 2)
+                    unsafe { masF[i] = F_diff1; }
+            }
+            Stopwatch s1 = new Stopwatch();
+            Stopwatch s2 = new Stopwatch();
+            DiffFuncs df = new DiffFuncs();
+            s1.Start();
+            double[] res = df.RungeKutta4(masF, 0, 1, 100, y, count);
+            s1.Stop();
+
+            s2.Start();
+            double[] res_paral = df.RungeKutta4_Paral(masF, 0, 1, 100, y, count);
+            s2.Stop();
+
+            long n1 = s1.ElapsedMilliseconds;
+            long n2 = s2.ElapsedMilliseconds;
+
+            Assert.AreEqual(n1 < n2, true);
+        }
+
+
+        unsafe public double F_diff1(double t, double* x)
+        {
+            return -(55 + x[2]) * x[0] + 65 * x[1];
+        }
+        unsafe public double F_diff2(double t, double* x)
+        {
+            return 0.0785 * (x[0] - x[1]);
+        }
+        unsafe public double F_diff3(double t, double* x)
+        {
+            return 0.1 * x[0];
+        }
     }
 }

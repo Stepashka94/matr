@@ -22,7 +22,7 @@ math_wrapper::IntegrFuncs::IntegrFuncs()
 /// <returns>Значение интеграла.</returns>
 double math_wrapper::IntegrFuncs::Simpson(FDelegate ^ fdelegate, double a, double b, int N)
 {
-	delegatePointer = (void*)Marshal::GetFunctionPointerForDelegate(fdelegate).ToPointer();
+	delegatePointer = (void*)Marshal::GetFunctionPointerForDelegate(fdelegate).ToPointer();//преобразование делегата в указатель на функцию
 	return myCppClass->Simpson(delegatePointer, a, b, N);
 };
 
@@ -36,7 +36,7 @@ double math_wrapper::IntegrFuncs::Simpson(FDelegate ^ fdelegate, double a, doubl
 /// <returns>Значение интеграла.</returns>
 double math_wrapper::IntegrFuncs::Simpson38(FDelegate ^ fdelegate, double a, double b, int N)
 {
-	delegatePointer = (void*)Marshal::GetFunctionPointerForDelegate(fdelegate).ToPointer();
+	delegatePointer = (void*)Marshal::GetFunctionPointerForDelegate(fdelegate).ToPointer();//преобразование делегата в указатель на функцию
 	return myCppClass->Simpson38(delegatePointer, a, b, N);
 };
 

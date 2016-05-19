@@ -9,7 +9,7 @@
 
 double MyIntegrFuncs::Simpson(void* Function, double a, double b, int N)
 { 
-	FType F = (FType )(Function);
+	FType F = (FType )(Function);//приведение указателя на функцию к  нужному типу
 	double h = (b - a) / N;
 	double x = a + h;
 	double s = 0;

@@ -1,4 +1,4 @@
-﻿Построение начато 14.05.2016 1:38:30.
+﻿Построение начато 19.05.2016 12:08:56.
      1>Проект "C:\Users\12345\Documents\Visual Studio 2012\Projects\matr\matr\matr.vcxproj" в узле 2 (целевые объекты Rebuild).
      1>ClCompile:
          D:\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /AI"C:\Program Files\Windows Kits\8.0\References\CommonConfiguration\Neutral" /Zi /clr /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /openmp /Yc"stdafx.h" /Fp"Debug\matr.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /analyze- /errorReport:prompt /clr:nostdlib stdafx.cpp
@@ -30,4 +30,4 @@
 
 Построение успешно завершено.
 
-Затраченное время: 00:00:01.71
+Затраченное время: 00:00:01.34

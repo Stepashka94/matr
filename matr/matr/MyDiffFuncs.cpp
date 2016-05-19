@@ -11,13 +11,18 @@ double* MyDiffFuncs::Eiler_Paral(void** Function, double a, double b, int n, dou
 {
 	double h = (b - a) / n;
 	FType* F = (FType* )(Function);
-
+	double* y_new = new double[count];
+	
 	for (int j = 0; j < n; j++)//цикл по веремни
 	{ 
 #pragma omp  parallel for
 		for (int i = 0; i < count; i++)
 		{
-			y[i] = y[i] + h * F[i](j * h, y);
+			y_new[i] = y[i] + h * F[i](j * h, y);
+		}
+		for (int i = 0; i < count; i++)
+		{
+			y[i] = y_new[i];
 		}
 	}
 	return y;
@@ -26,6 +31,7 @@ double* MyDiffFuncs::Eiler_Paral(void** Function, double a, double b, int n, dou
 double* MyDiffFuncs::RungeKutta2_Paral(void** Function, double a, double b, int n, double* y, int count)
 {
 	double h = (b - a) / n;
+	double* y_new = new double[count];
 	FType* F = (FType* )(Function);
 	double* z = new double[count]; 
 	for (int i = 0; i < count; i++)
@@ -36,7 +42,15 @@ double* MyDiffFuncs::RungeKutta2_Paral(void** Function, double a, double b, int 
 		for (int i = 0; i < count; i++)
 		{
 			z[i] = y[i] + h/2 * F[i](j * h, y);
-			y[i] = y[i] + h * F[i](j * h, z);		
+		}
+		#pragma omp  parallel for
+		for (int i = 0; i < count; i++)
+		{
+			y_new[i] = y[i] + h * F[i](j * h, z);		
+		}
+		for (int i = 0; i < count; i++)
+		{
+			y[i] = y_new[i];
 		}
 	}
 	return y;
@@ -46,6 +60,7 @@ double* MyDiffFuncs::RungeKutta4_Paral(void** Function, double a, double b, int 
 {
 	FType* F = (FType* )(Function);
 	// значения функций
+	double* y_new = new double[count];
 	double* xx = new double[count];// при t=0.
 	double* R1 = new double[count]; // первое слагаемое из формулы для трёх функций
 	double* R2 = new double[count]; // второе слагаемое из формулы для трёх функций
@@ -93,8 +108,13 @@ double* MyDiffFuncs::RungeKutta4_Paral(void** Function, double a, double b, int 
 		// новые значения функций
 #pragma  omp parallel for
 		for (int i = 0; i < count; i++)
-			y[i] = y[i] + (R1[i] + 2 * R2[i] + 2 * R3[i] + R4[i]) / 6;
+			y_new[i] = y[i] + (R1[i] + 2 * R2[i] + 2 * R3[i] + R4[i]) / 6;
 
+
+		for (int i = 0; i < count; i++)
+		{
+			y[i] = y_new[i];
+		}
 	} 
 	return y;
 }
